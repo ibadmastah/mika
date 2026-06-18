@@ -26,3 +26,23 @@ dropdowns.forEach(dropdown => {
     });
   }
 });
+
+const menuButton = document.getElementById("menuButton");
+const navMenu = document.getElementById("navMenu");
+
+menuButton.addEventListener("click", () => {
+  navMenu.classList.toggle("open");
+});
+
+document.querySelectorAll(".dropdown-btn")
+.forEach(btn => {
+
+  btn.addEventListener("click", () => {
+
+    if(window.innerWidth <= 900){
+      btn.parentElement.classList.toggle("active");
+    }
+
+  });
+
+});
