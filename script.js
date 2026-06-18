@@ -13,3 +13,16 @@ menuLinks.forEach(function (link) {
     menuButton.setAttribute("aria-expanded", "false");
   });
 });
+const dropdowns = document.querySelectorAll('.dropdown');
+
+dropdowns.forEach(dropdown => {
+  const btn = dropdown.querySelector('.dropdown-btn');
+
+  if(btn){
+    btn.addEventListener('click', () => {
+      if(window.innerWidth <= 900){
+        dropdown.classList.toggle('active');
+      }
+    });
+  }
+});
